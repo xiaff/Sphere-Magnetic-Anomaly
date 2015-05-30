@@ -17,7 +17,7 @@ i=pi/3;  %有效磁化倾角is
 a=0; %剖面磁方位角
 T=50000;%地磁场T=50000nT
 
-% 球体1参数
+% 球体参数
 R1=10; % 球体半径 m
 D1=30; % 球体埋深 m
 v1=4*pi*R1^3;
@@ -25,33 +25,12 @@ k=0.2; %磁化率
 M1=k*T/u;  %磁化强度 A/m
 m1=M1*v1;   %磁矩
 
-% 球体1 理论磁异常
-%(x-50),(y-0)
-Za1=(u*m1*((2*D1.^2-(X-50).^2-Y.^2)*sin(i)-3*D1*(X-50).*cos(i)*cos(a)-3*D1*Y.*cos(i)*sin(a)))./(4*pi*((X-50).^2+Y.^2+D1.^2).^(5/2));
-Hax1=(u*m1*((2*(X-50).^2-Y.^2-D1.^2)*cos(i)*cos(a)-3*D1*(X-50).*sin(i)+3*(X-50).*Y.*cos(i)*sin(a)))./(4*pi*((X-50).^2+Y.^2+D1.^2).^(5/2));
-Hay1=(u*m1*((2*Y.^2-(X-50).^2-D1.^2)*cos(i)*cos(a)-3*D1*Y.*sin(i)+3*(X-50).*Y.*cos(i)*cos(a)))./(4*pi*((X-50).^2+Y.^2+D1.^2).^(5/2));
-deltT1=u*m1*((2*D1.^2-(X-50).^2-Y.^2)*sin(i)*sin(i)+(2*(X-50).^2-Y.^2-D1.^2)*(cos(i)*cos(a))^2+(2*Y.^2-(X-50).^2-D1.^2)*(cos(i)*sin(a))^2-3*(X-50).*D1*sin(2*i)*cos(a)+3*(X-50).*Y.*cos(i)^2*sin(2*a)-3*Y.*D1*sin(2*i)*sin(a))./(4*pi*((X-50).^2+Y.^2+D1.^2).^(5/2));
-
-% 球体2参数
-R2=100; % 球体半径 m
-v2=4*pi*R2^3;
-k=0.2; %磁化率
-M2=k*T/u;  %磁化强度 A/m
-m2=M2*v2;   %磁矩
-D2=100; % 球体埋深 m
-
-% 球体2 理论磁异常
-%(x-0_,(y-0)
-Za2=(u*m2*((2*D2.^2-X.^2-Y.^2)*sin(i)-3*D2*X.*cos(i)*cos(a)-3*D2*Y.*cos(i)*sin(a)))./(4*pi*(X.^2+Y.^2+D2.^2).^(5/2));
-Hax2=(u*m2*((2*X.^2-Y.^2-D2.^2)*cos(i)*cos(a)-3*D2*X.*sin(i)+3*X.*Y.*cos(i)*sin(a)))./(4*pi*(X.^2+Y.^2+D2.^2).^(5/2));
-Hay2=(u*m2*((2*Y.^2-X.^2-D2.^2)*cos(i)*cos(a)-3*D2*Y.*sin(i)+3*X.*Y.*cos(i)*cos(a)))./(4*pi*(X.^2+Y.^2+D2.^2).^(5/2));
-deltT2=u*m2*((2*D2.^2-X.^2-Y.^2)*sin(i)*sin(i)+(2*X.^2-Y.^2-D2.^2)*(cos(i)*cos(a))^2+(2*Y.^2-X.^2-D2.^2)*(cos(i)*sin(a))^2-3*X.*D2*sin(2*i)*cos(a)+3*X.*Y.*cos(i)^2*sin(2*a)-3*Y.*D2*sin(2*i)*sin(a))./(4*pi*(X.^2+Y.^2+D2.^2).^(5/2));
-
-%叠加异常
-Za=Za1+Za2;
-Hax=Hax1+Hax2;
-Hay=Hay1+Hay2;
-deltT=deltT1+deltT2;
+% 球体 理论磁异常
+%(x-0),(y-0)
+Za=(u*m1*((2*D1.^2-X.^2-Y.^2)*sin(i)-3*D1*X.*cos(i)*cos(a)-3*D1*Y.*cos(i)*sin(a)))./(4*pi*(X.^2+Y.^2+D1.^2).^(5/2));
+Hax=(u*m1*((2*X.^2-Y.^2-D1.^2)*cos(i)*cos(a)-3*D1*X.*sin(i)+3*X.*Y.*cos(i)*sin(a)))./(4*pi*(X.^2+Y.^2+D1.^2).^(5/2));
+Hay=(u*m1*((2*Y.^2-X.^2-D1.^2)*cos(i)*cos(a)-3*D1*Y.*sin(i)+3*X.*Y.*cos(i)*cos(a)))./(4*pi*(X.^2+Y.^2+D1.^2).^(5/2));
+deltT=u*m1*((2*D1.^2-X.^2-Y.^2)*sin(i)*sin(i)+(2*X.^2-Y.^2-D1.^2)*(cos(i)*cos(a))^2+(2*Y.^2-X.^2-D1.^2)*(cos(i)*sin(a))^2-3*X.*D1*sin(2*i)*cos(a)+3*X.*Y.*cos(i)^2*sin(2*a)-3*Y.*D1*sin(2*i)*sin(a))./(4*pi*(X.^2+Y.^2+D1.^2).^(5/2));
 
 figure(1),pcolor(X,Y,Za),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论球体 Za异常');
 figure(2),pcolor(X,Y,Hax),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论球体 Hax异常');
