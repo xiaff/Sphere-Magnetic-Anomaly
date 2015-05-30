@@ -40,8 +40,8 @@ a=[0.4286 0.1749 0.1103 0.0813 0.0645 0.0536 0.0458 0.04 0.0355 0.1759];
 
 % Za 转换 Ha
 % Ha 转换 Za
-Ha_convension=zeros(1,nx);
-Za_convension=zeros(1,nx);
+Ha_conversion=zeros(1,nx);
+Za_conversion=zeros(1,nx);
 for i=11:nx-10
     tmp_ha=0;
     tmp_za=0;
@@ -56,14 +56,14 @@ for i=11:nx-10
             tmp_za=tmp_za+a(j)*(Ha(i+j)-Ha(i-j));
         end
     end
-    Ha_convension(i)=tmp_ha;
-    Za_convension(i)=-tmp_za;
+    Ha_conversion(i)=tmp_ha;
+    Za_conversion(i)=-tmp_za;
 end
 
 subplot(2,1,1);
-plot(x,Ha,'r:',x,Ha_convension,'g'),xlabel('X (m)'),ylabel('Za磁异常(nT.)');,%axis([-500 500 -2 5]),
+plot(x,Ha,'r:',x,Ha_conversion,'g'),xlabel('X (m)'),ylabel('Za磁异常(nT.)');,%axis([-500 500 -2 5]),
 legend('Ha原始异常','Ha转换异常'),title('分量转换异常Za->Ha');
 subplot(2,1,2);
-plot(x,Za,'b',x,Za_convension,'g'),xlabel('X (m)'),ylabel('Za磁异常(nT.)');
+plot(x,Za,'b',x,Za_conversion,'g'),xlabel('X (m)'),ylabel('Za磁异常(nT.)');
 legend('Za原始异常','Za转换异常'),title('分量转换异常 Ha->Za');
 
