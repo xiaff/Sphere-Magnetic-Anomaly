@@ -18,8 +18,8 @@ A=0; %剖面磁方位角
 T=50000;%地磁场T=50000nT
 
 % 圆柱体体参数
-R1=10; % 球体半径 m
-D1=30; % 球体埋深 m
+R1=10; % 圆柱体半径 m
+D1=30; % 圆柱体埋深 m
 S1=pi*R1^2;
 v1=4*pi*R1^3;
 k=0.2; %磁化率
@@ -31,10 +31,19 @@ Za=(u*m1*((D1.^2-(X-50).^2)*sin(i)-2*D1*(X-50).*cos(i)))./(2*pi*((X-50).^2+D1.^2
 Ha=-u*m1*((D1.^2-(X-50).^2)*cos(i)+2*D1*(X-50).*sin(i))./(2*pi*((X-50).^2+D1.^2).^2);
 deltT=u*m1*sin(i)*((D1^2-X.^2)*cos(2*i-pi/2)-2*D1*X.*cos(2*i-pi/2))./(2*pi*(X.^2+D1^2).^2*sin(i));
 
-figure(1),pcolor(X,Y,Za),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论球体 Za异常');
-figure(2),pcolor(X,Y,Ha),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论球体 Ha常');
-figure(3),pcolor(X,Y,deltT),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论球体 delta T常');
+% figure(1),pcolor(X,Y,Za),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论圆柱体 Za异常');
+% figure(2),pcolor(X,Y,Ha),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论圆柱体 Ha常');
+% figure(3),pcolor(X,Y,deltT),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论圆柱体 delta T常');
 
+%主剖面
+x0=x;
+yy=40;
+Za0=Za(yy,:);
+Ha0=Ha(yy,:);
+deltT0=deltT(yy,:);
+figure(8),plot(x,Za0),ylabel('Za/nT'),title('理论圆柱体Za异常主剖面图');
+figure(9),plot(x,Ha0),ylabel('Ha/nT'),title('理论圆柱体Ha异常主剖面图');
+figure(10),plot(x,deltT0),ylabel('deltT/nT'),title('理论圆柱体ΔT异常主剖面图');
 
 %输出grd文件
 nx=max(size(x));

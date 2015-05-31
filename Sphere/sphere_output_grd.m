@@ -32,8 +32,27 @@ Hax=(u*m1*((2*X.^2-Y.^2-D1.^2)*cos(i)*cos(a)-3*D1*X.*sin(i)+3*X.*Y.*cos(i)*sin(a
 Hay=(u*m1*((2*Y.^2-X.^2-D1.^2)*cos(i)*cos(a)-3*D1*Y.*sin(i)+3*X.*Y.*cos(i)*cos(a)))./(4*pi*(X.^2+Y.^2+D1.^2).^(5/2));
 deltT=u*m1*((2*D1.^2-X.^2-Y.^2)*sin(i)*sin(i)+(2*X.^2-Y.^2-D1.^2)*(cos(i)*cos(a))^2+(2*Y.^2-X.^2-D1.^2)*(cos(i)*sin(a))^2-3*X.*D1*sin(2*i)*cos(a)+3*X.*Y.*cos(i)^2*sin(2*a)-3*Y.*D1*sin(2*i)*sin(a))./(4*pi*(X.^2+Y.^2+D1.^2).^(5/2));
 
-figure(1),pcolor(X,Y,Za),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论球体 Za异常');
-figure(2),pcolor(X,Y,Hax),shading interp,xlabel('x(m)'),ylabel('y(m)'),title('理论球体 Hax异常');
+figure(1),surf(X,Y,Za,'EdgeColor','none'),xlabel('x/m'),ylabel('y/m'),zlabel('Za/nT'),title('理论球体Za异常曲面图'),colorbar;
+figure(2),surf(X,Y,Hax,'EdgeColor','none'),xlabel('x/m'),ylabel('y/m'),zlabel('Hax/nT'),title('理论球体Hax异常曲面图'),colorbar;
+figure(3),surf(X,Y,Hay,'EdgeColor','none'),xlabel('x/m'),ylabel('y/m'),zlabel('Hay/nT'),title('理论球体Hay异常曲面图'),colorbar;
+figure(4),surf(X,Y,deltT,'EdgeColor','none'),xlabel('x/m'),ylabel('y/m'),zlabel('ΔT/nT'),title('理论球体ΔT异常曲面图'),colorbar;
+
+figure(5),contourf(X,Y,Za),xlabel('x/m'),ylabel('y/m'),zlabel('Za/nT'),title('理论球体Za异常平面等值线图'),colorbar;
+figure(6),contourf(X,Y,Za),xlabel('x/m'),ylabel('y/m'),zlabel('Hax/nT'),title('理论球体Hax异常平面等值线图'),colorbar;
+figure(7),contourf(X,Y,Za),xlabel('x/m'),ylabel('y/m'),zlabel('Hay/nT'),title('理论球体Hay异常平面等值线图'),colorbar;
+figure(8),contourf(X,Y,Za),xlabel('x/m'),ylabel('y/m'),zlabel('ΔT/nT'),title('理论球体ΔT异常平面等值线图'),colorbar;
+
+%主剖面
+x0=x;
+yy=40;
+Za0=Za(yy,:);
+Hax0=Hax(yy,:);
+Hay0=Hay(yy,:);
+deltT0=deltT(yy,:);
+figure(8),plot(x,Za0),ylabel('Za/nT'),title('理论球体Za异常主剖面图');
+figure(9),plot(x,Hax0),ylabel('Hax/nT'),title('理论球体Hax异常主剖面图');
+figure(10),plot(x,Hay0),ylabel('Hay/nT'),title('理论球体Hay异常主剖面图');
+figure(11),plot(x,deltT0),ylabel('deltT/nT'),title('理论球体ΔT异常主剖面图');
 
 
 %输出grd文件
