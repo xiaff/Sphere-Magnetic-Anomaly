@@ -60,10 +60,6 @@ for i=11:nx-10
     Za_conversion(i)=-tmp_za;
 end
 
-subplot(2,1,1);
-plot(x,Ha,'r:',x,Ha_conversion,'g'),xlabel('X (m)'),ylabel('Za磁异常(nT.)');,%axis([-500 500 -2 5]),
-legend('Ha原始异常','Ha转换异常'),title('分量转换异常Za->Ha');
-subplot(2,1,2);
-plot(x,Za,'b',x,Za_conversion,'g'),xlabel('X (m)'),ylabel('Za磁异常(nT.)');
-legend('Za原始异常','Za转换异常'),title('分量转换异常 Ha->Za');
+figure(1),plot(x,Ha,'r',x,Ha_conversion,'b:'),xlabel('X (m)'),ylabel('磁异常(nT.)'),legend('Ha原始异常','Ha转换异常'),title('分量转换异常Za->Ha');
+figure(2),plot(x,Za,'r',x,Za_conversion,'b:'),xlabel('X (m)'),ylabel('磁异常(nT.)'),legend('Za原始异常','Za转换异常'),title('分量转换异常 Ha->Za');
 
