@@ -49,10 +49,10 @@ Za0=Za(yy,:);
 Hax0=Hax(yy,:);
 Hay0=Hay(yy,:);
 deltT0=deltT(yy,:);
-figure(8),plot(x,Za0),ylabel('Za/nT'),title('理论球体Za异常主剖面图');
-figure(9),plot(x,Hax0),ylabel('Hax/nT'),title('理论球体Hax异常主剖面图');
-figure(10),plot(x,Hay0),ylabel('Hay/nT'),title('理论球体Hay异常主剖面图');
-figure(11),plot(x,deltT0),ylabel('deltT/nT'),title('理论球体ΔT异常主剖面图');
+figure(9),plot(x,Za0),ylabel('Za/nT'),title('理论球体Za异常主剖面图');
+figure(10),plot(x,Hax0),ylabel('Hax/nT'),title('理论球体Hax异常主剖面图');
+figure(11),plot(x,Hay0),ylabel('Hay/nT'),title('理论球体Hay异常主剖面图');
+figure(12),plot(x,deltT0),ylabel('deltT/nT'),title('理论球体ΔT异常主剖面图');
 
 
 %输出grd文件

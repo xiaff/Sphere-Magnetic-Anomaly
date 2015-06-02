@@ -41,8 +41,8 @@ Ha=Ha1+Ha2;
 deltT=deltT1+deltT2;
 
 
-% h=1; % 延拓高度 5m
-h=2; % 延拓高度 10m
+h=1; % 延拓高度 5m
+%h=2; % 延拓高度 10m
 n=10; % 级数，即参与积分的区间段（积分点数-1）/2
 
 % Za Ha 向上延拓
@@ -64,7 +64,7 @@ for i=(h*n+1):(nx-h*n)
     Tu1(i)=tmp_t;
 end
 
-figure(1),plot(x,Za,'b',x,Zau1,'r:'),xlabel('X (m)'),ylabel('Za磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓Za磁异常(10m)');
-figure(2),plot(x,Ha,'b',x,Hau1,'r:'),xlabel('X (m)'),ylabel('Ha磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓Ha磁异常(10m)');
-figure(3),plot(x,deltT,'b',x,Tu1,'r:'),xlabel('X (m)'),ylabel('ΔT磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓ΔT磁异常(10m)');
+figure(1),plot(x,Za,'b',x,Zau1,'r:'),xlabel('X (m)'),ylabel('Za磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓Za磁异常(5m)');
+figure(2),plot(x,Ha,'b',x,Hau1,'r:'),xlabel('X (m)'),ylabel('Ha磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓Ha磁异常(5m)');
+figure(3),plot(x,deltT,'b',x,Tu1,'r:'),xlabel('X (m)'),ylabel('ΔT磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓ΔT磁异常(5m)');
 
