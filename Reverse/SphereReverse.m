@@ -9,8 +9,7 @@ ny=81; % Y方向测点数
 xmin=-200; % X方向起点
 ymin=-200; % Y方向起点
 x=xmin:dx:(xmin+(nx-1)*dx); % X方向范围
-y=ymin:dy:(ymin+(ny-1)*dy); % Y方向范围
-[X,Y]=meshgrid(x,y); % 转化为排列
+y=ymin-50:dy:(ymin+(ny-1)*dy); % Y方向范围
 
 u=4*pi*10^(-7);  %磁导率
 i=pi/3;  %有效磁化倾角is
@@ -25,14 +24,11 @@ k=0.2; %磁化率
 M1=k*T/u;  %磁化强度 A/m
 m1=M1*v1;   %磁矩
 
-% 球体 理论磁异常
+% 球体 理论磁异常主剖面
 %(x-0),(y-0)
-Za=(u*m1*((2*D1.^2-X.^2-Y.^2)*sin(i)-3*D1*X.*cos(i)*cos(a)-3*D1*Y.*cos(i)*sin(a)))./(4*pi*(X.^2+Y.^2+D1.^2).^(5/2));
+y=0;
+Za0=(u*m1*((2*D1.^2-x.^2-y.^2)*sin(i)-3*D1*x.*cos(i)*cos(a)-3*D1*y.*cos(i)*sin(a)))./(4*pi*(x.^2+y.^2+D1.^2).^(5/2));
 
-%主剖面
-x0=x;
-yy=40;
-Za0=Za(yy,:);
 plot(x,Za0),ylabel('Za/nT'),title('理论球体Za异常主剖面图');
 zMax=-10000;
 zMin=10000;
@@ -48,9 +44,9 @@ for i=1:nx
         xMin=i;
     end
 end
-%转化为以米韦单位的坐标
-xMax=xmin+(xMax-1)*dx
-xMin=xmin+(xMin-1)*dx
+%转化为以米为单位的坐标
+xMax=xmin+(xMax-1)*dx;
+xMin=xmin+(xMin-1)*dx;
 %dm=R/f
 dm=xMin-xMax;
 km=abs(zMin)/zMax;
