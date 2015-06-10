@@ -14,13 +14,12 @@ namespace GeoMag_Viewer
     {
         private int iNum = 91;
         private int jNum = 81;
-        public double[,] Za
+        public double[, ,] Za3D
         {
             get;
             private set;
         }
-
-        public double[,] Hax
+        public double[, ,] Hax3D
         {
             get;
             private set;
@@ -28,30 +27,39 @@ namespace GeoMag_Viewer
 
         public Values()
         {
-            //get Za
-            StreamResourceInfo zaInfo = Application.GetContentStream(new Uri("Resources/za.out", UriKind.Relative));
-            var streamReader = new StreamReader(zaInfo.Stream);
-            string content=streamReader.ReadToEnd();
-            String[] lines=content.Split(new string[] { " \n" }, StringSplitOptions.None);
-            Za = new Double[iNum, jNum];
-            for(int i=0;i<iNum;i++){
-                string[] words = lines[i].Split(new string[] { " " }, StringSplitOptions.None);
-                for(int j=0;j<jNum;j++){
-                    Za[i, j] = Double.Parse(words[j]);
+            StreamResourceInfo za3DInfo = Application.GetContentStream(new Uri("Resources/za_all.out", UriKind.Relative));
+            var za3DStreamReader = new StreamReader(za3DInfo.Stream);
+            string content = za3DStreamReader.ReadToEnd();
+            string[] lines = content.Split(new string[] { " \n" }, StringSplitOptions.None);
+            Za3D = new Double[91, 46, jNum];
+            for (int l = 0; l < 91; l++)
+            {
+                for (int i = 0; i < 46; i++)
+                {
+                    int index = l * 46 + i;
+                    string[] words = lines[index].Split(new string[] { " " }, StringSplitOptions.None);
+                    for (int j = 0; j < jNum; j++)
+                    {
+                        Za3D[l, i, j] = Double.Parse(words[j]);
+                    }
                 }
             }
-            //get Hax
-            StreamResourceInfo haxInfo = Application.GetContentStream(new Uri("Resources/hax.out", UriKind.Relative));
-            streamReader = new StreamReader(haxInfo.Stream);
-            content = streamReader.ReadToEnd();
-            String[] haxLines = content.Split(new string[] { " \n" }, StringSplitOptions.None);
-            Hax = new Double[iNum, jNum];
-            for (int i = 0; i < iNum; i++)
+
+            StreamResourceInfo hax3DInfo = Application.GetContentStream(new Uri("Resources/hax_all.out", UriKind.Relative));
+            var hax3DStreamReader = new StreamReader(hax3DInfo.Stream);
+            content = hax3DStreamReader.ReadToEnd();
+            lines = content.Split(new string[] { " \n" }, StringSplitOptions.None);
+            Hax3D = new Double[91, 46, jNum];
+            for (int l = 0; l < 91; l++)
             {
-                string[] words = haxLines[i].Split(new string[] { " " }, StringSplitOptions.None);
-                for (int j = 0; j < jNum; j++)
+                for (int i = 0; i < 46; i++)
                 {
-                    Hax[i, j] = Double.Parse(words[j]);
+                    int index = l * 46 + i;
+                    string[] words = lines[index].Split(new string[] { " " }, StringSplitOptions.None);
+                    for (int j = 0; j < jNum; j++)
+                    {
+                        Hax3D[l, i, j] = Double.Parse(words[j]);
+                    }
                 }
             }
         }

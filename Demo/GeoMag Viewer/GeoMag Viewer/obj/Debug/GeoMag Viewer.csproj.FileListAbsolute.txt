@@ -26,7 +26,6 @@ C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag V
 C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\GeoMag Viewer.application
 C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.exe.manifest
 C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.application
-C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\za.out
 C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer_Content.g.cs
-C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\dt.out
-C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\hax.out
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\za_all.out
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\hax_all.out

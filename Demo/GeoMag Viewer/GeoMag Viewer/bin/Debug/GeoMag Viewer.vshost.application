@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="GeoMag Viewer.exe.manifest" size="6636">
+    <dependentAssembly dependencyType="install" codebase="GeoMag Viewer.exe.manifest" size="6741">
       <assemblyIdentity name="GeoMag Viewer.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>U6FnpF2qhbJpHUKkxbCK2aXK5b5MLHaRwQNEq2MYMoM=</dsig:DigestValue>
+        <dsig:DigestValue>J/ipnBdD54Ui2dfT1qY+cVhwsnRnmVvLKk9DvRlZOzY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -6,21 +6,40 @@
         Title="GeoMag Viewer" Height="350" Width="525">
     <Grid Background="Gray">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <!--<Image 
-            Grid.Row="0"
-            Source="images/za_0.png" 
-            Stretch="Uniform"/>-->
-        <oxy:PlotView 
-            Name="MyPlotView">
-            <oxy:PlotView.Series>
-                <oxy:LineSeries Name="ZaLine"/>
-                <oxy:LineSeries Name="HaxLine"/>
-            </oxy:PlotView.Series>
-        </oxy:PlotView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <oxy:PlotView Grid.Column="0" Name="MyPlotView">
+                <oxy:PlotView.Series>
+                    <oxy:LineSeries Name="ZaLine"/>
+                    <oxy:LineSeries Name="HaxLine"/>
+                </oxy:PlotView.Series>
+            </oxy:PlotView>
+            <Slider Grid.Column="1" Name="DeepSlider"
+                    Orientation="Vertical"          
+                    Margin="5,10,5,10" 
+                    ValueChanged="DeepSlider_ValueChanged"
+                    Maximum="45" 
+                    Minimum="0" 
+                    TickFrequency="1"
+                    TickPlacement="TopLeft"
+                    />            
+            <TextBlock Grid.Column="2"
+                       Name="DeepText"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Center"
+                       />
+        </Grid>
+
         <Slider Grid.Row="1"
                 Name="angleSlider"
                 ValueChanged="angleSlider_ValueChanged"

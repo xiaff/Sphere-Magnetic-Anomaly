@@ -8,8 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/za.out")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/dt.out")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/hax.out")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/za_all.out")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/hax_all.out")]
 
 
