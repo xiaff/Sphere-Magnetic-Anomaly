@@ -1,0 +1,39 @@
+﻿<Window x:Class="GeoMag_Viewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:local="clr-namespace:GeoMag_Viewer"
+        Title="GeoMag Viewer" Height="350" Width="525">
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--<Image 
+            Grid.Row="0"
+            Source="images/za_0.png" 
+            Stretch="Uniform"/>-->
+        <oxy:PlotView 
+            Name="MyPlotView">
+            <oxy:PlotView.Series>
+                <oxy:LineSeries Name="ZaLine"/>
+                <oxy:LineSeries Name="HaxLine"/>
+            </oxy:PlotView.Series>
+        </oxy:PlotView>
+        <Slider Grid.Row="1"
+                Name="angleSlider"
+                ValueChanged="angleSlider_ValueChanged"
+                Margin="10,5,10,5" 
+                Maximum="90" 
+                Minimum="0" 
+                TickFrequency="1"
+                TickPlacement="TopLeft"/>
+        <TextBlock Grid.Row="2"
+                   Name="tickText"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="150,0,150,0" 
+                   HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\GeoMag Viewer.exe.config
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\GeoMag Viewer.exe
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\GeoMag Viewer.pdb
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.csprojResolveAssemblyReference.cache
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\MainWindow.baml
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\MainWindow.g.cs
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\App.g.cs
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer_MarkupCompile.cache
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.g.resources
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag_Viewer.Properties.Resources.resources
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.csproj.GenerateResource.Cache
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.exe
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.pdb
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.Xps.dll
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.Xps.xml
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.dll
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.pdb
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\OxyPlot.xml
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer_MarkupCompile.lref
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\GeoMag Viewer.exe.manifest
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\GeoMag Viewer.application
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.exe.manifest
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer.application
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\za.out
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\obj\Debug\GeoMag Viewer_Content.g.cs
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\dt.out
+C:\Users\晨炜\Documents\Visual Studio 2013\Projects\WPF\GeoMag Viewer\GeoMag Viewer\bin\Debug\Resources\hax.out

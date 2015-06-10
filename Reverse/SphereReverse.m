@@ -2,14 +2,10 @@ clc;
 clear;
 
 % 测点分布范围
-dx=5; % X方向测点间距
-dy=5; % Y方向测点间距
-nx=81; % X方向测点数
-ny=81; % Y方向测点数
-xmin=-200; % X方向起点
-ymin=-200; % Y方向起点
-x=xmin:dx:(xmin+(nx-1)*dx); % X方向范围
-y=ymin-50:dy:(ymin+(ny-1)*dy); % Y方向范围
+dx=5; % X方向测点间距-
+nx=81; % X方向测点数-
+xmin=-200; % X方向起点-
+x=xmin:dx:(xmin+(nx-1)*dx); % X方向范围 
 
 u=4*pi*10^(-7);  %磁导率
 i=pi/3;  %有效磁化倾角is
