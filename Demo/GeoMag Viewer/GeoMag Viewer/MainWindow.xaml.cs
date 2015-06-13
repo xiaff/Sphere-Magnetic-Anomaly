@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using OxyPlot;
 using OxyPlot.Series;
+using OxyPlot.Wpf;
 using Microsoft.Win32;
 
 namespace GeoMag_Viewer
@@ -26,32 +27,16 @@ namespace GeoMag_Viewer
         public MainWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             Values v = new Values();
-            //double[,] Za = v.Za;
-            //double[,] Hax = v.Hax;
-            //int iNum = Za.GetLength(0);
-            //int jNum = Za.GetLength(1);
-            //ZaLists = new List<DataPoint>[iNum];
-            //HaxLists = new List<DataPoint>[iNum];
-            //for (int i = 0; i < iNum; i++)
-            //{
-            //    ZaLists[i] = new List<DataPoint>();
-            //    HaxLists[i] = new List<DataPoint>();
-            //    for (int j = 0; j < jNum; j++)
-            //    {
-            //        int x = -200 + j * 5;
-            //        ZaLists[i].Add(new DataPoint(x, Za[i, j]));
-            //        HaxLists[i].Add(new DataPoint(x, Hax[i, j]));
-            //    }
-            //}
             MyPlotView.Title = "Za/Hax与磁化倾角的关系Demo";
+            var valueAxis = new LinearAxis() { Title = "磁异常/nT" };
+            MyPlotView.Axes.Add(valueAxis);
+            MyPlotView.LegendFontSize = 20;
             ZaLine.Title = "Za异常";
             HaxLine.Title = "Hax异常";
             tickText.Text = "磁化倾角is=0";
             DeepText.Text = "球体埋深";
-            this.WindowState = WindowState.Maximized;
-            //WindowDeep winDeep = new WindowDeep();
-            //winDeep.ShowDialog();
 
             double[, ,] Za3D = v.Za3D;
             double[, ,] Hax3D = v.Hax3D;
@@ -80,8 +65,15 @@ namespace GeoMag_Viewer
             ZaLine.ItemsSource = Za3DLists[angleIndex, deepIndex];
             HaxLine.ItemsSource = Hax3DLists[angleIndex, deepIndex];
 
-        }
+            width = 100;
+            height=100;
+            RotateTransform rt = new RotateTransform(0,width/2,height/2);
+            SphereImage.RenderTransform = rt;
 
+
+        }
+        double width;
+        double height;
         private void angleSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (tickText == null)
@@ -93,7 +85,10 @@ namespace GeoMag_Viewer
             angleIndex = iAngle;
             tickText.Text = "磁化倾角is=" + angle;
             ZaLine.ItemsSource = Za3DLists[angleIndex, deepIndex];
-            HaxLine.ItemsSource = Hax3DLists[angleIndex, deepIndex];
+            HaxLine.ItemsSource = Hax3DLists[angleIndex, deepIndex]; 
+
+            RotateTransform rt = new RotateTransform(angle, width / 2, height / 2);
+            SphereImage.RenderTransform = rt;
         }
 
         private void DeepSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -108,18 +103,6 @@ namespace GeoMag_Viewer
             DeepText.Text = "球体埋深\n" + deep+"m";
             ZaLine.ItemsSource = Za3DLists[angleIndex, deepIndex];
             HaxLine.ItemsSource = Hax3DLists[angleIndex, deepIndex];
-        }
-
-        public List<DataPoint>[] ZaLists
-        {
-            get;
-            private set;
-        }
-
-        public List<DataPoint>[] HaxLists
-        {
-            get;
-            private set;
         }
 
         //角度*深度

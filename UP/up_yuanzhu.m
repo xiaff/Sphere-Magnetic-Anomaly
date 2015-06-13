@@ -40,6 +40,21 @@ Za=Za1+Za2;
 Ha=Ha1+Ha2;
 deltT=deltT1+deltT2;
 
+%增加埋深5m
+D1=D1+5;
+D2=D2+5;
+% 柱体1理论磁异常
+Za11=(u*m1*((D1.^2-(x-50).^2)*sin(i)-2*D1*(x-50).*cos(i)))./(2*pi*((x-50).^2+D1.^2).^2);
+Ha11=-u*m1*((D1.^2-(x-50).^2)*cos(i)+2*D1*(x-50).*sin(i))./(2*pi*((x-50).^2+D1.^2).^2);
+deltT11=u*m1*sin(I)*((D1^2-(x-50).^2)*cos(2*i-pi/2)-2*D1*(x-50).*cos(2*i-pi/2))./((2*pi*(x-50).^2+D1^2).^2*sin(i));
+% 柱体2理论磁异常
+Za22=(u*m2*((D2.^2-(x+50).^2)*sin(i)-2*D2*(x+50).*cos(i)))./(2*pi*((x+50).^2+D2.^2).^2);
+Ha22=-(u*m2*((D2.^2-(x+50).^2)*cos(i)+2*D2*(x+50).*sin(i)))./(2*pi*((x+50).^2+D2.^2).^2);
+deltT22=u*m2*sin(I)*((D2^2-(x+50).^2)*cos(2*i-pi/2)-2*D2*(x+50).*cos(2*i-pi/2))./(2*pi*((x+50).^2+D2^2).^2*sin(i));
+
+Zaa=Za11+Za22;
+Haa=Ha11+Ha22;
+deltTT=deltT11+deltT22;
 
 h=1; % 延拓高度 5m
 %h=2; % 延拓高度 10m
@@ -64,7 +79,7 @@ for i=(h*n+1):(nx-h*n)
     Tu1(i)=tmp_t;
 end
 
-figure(1),plot(x,Za,'b',x,Zau1,'r:'),xlabel('X (m)'),ylabel('Za磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓Za磁异常(5m)');
-figure(2),plot(x,Ha,'b',x,Hau1,'r:'),xlabel('X (m)'),ylabel('Ha磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓Ha磁异常(5m)');
-figure(3),plot(x,deltT,'b',x,Tu1,'r:'),xlabel('X (m)'),ylabel('ΔT磁异常(nT.)'),legend('原始异常','n=10上延异常',n),title('向上延拓ΔT磁异常(5m)');
+figure(1),plot(x,Zau1,'r',x,Zaa),xlabel('X (m)'),ylabel('Za磁异常(nT.)'),legend('上延5m异常','增加埋深5m异常'),title('向上延拓Za磁异常(5m)');
+figure(2),plot(x,Hau1,'r',x,Haa),xlabel('X (m)'),ylabel('Ha磁异常(nT.)'),legend('上延5m异常','增加埋深5m异常'),title('向上延拓Ha磁异常(5m)');
+figure(3),plot(x,Tu1,'r',x,deltTT),xlabel('X (m)'),ylabel('ΔT磁异常(nT.)'),legend('上延5m异常','增加埋深5m异常'),title('向上延拓ΔT磁异常(5m)');
 

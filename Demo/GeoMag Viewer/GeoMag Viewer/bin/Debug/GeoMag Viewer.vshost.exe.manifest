@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GeoMag Viewer.exe" size="151960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GeoMag Viewer.exe" size="164760">
       <assemblyIdentity name="GeoMag Viewer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gk2VCXYDeVXCJC9TEleyB4u+Mw+TB4wlSeqDtDo79yY=</dsig:DigestValue>
+        <dsig:DigestValue>Wd55J9ao8/GpGT5lHe49yWiqDIqmwCAeVRVWlasF6go=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

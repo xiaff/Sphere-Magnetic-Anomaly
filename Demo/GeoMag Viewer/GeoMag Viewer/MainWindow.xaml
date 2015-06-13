@@ -22,6 +22,14 @@
                     <oxy:LineSeries Name="HaxLine"/>
                 </oxy:PlotView.Series>
             </oxy:PlotView>
+            <Image Grid.Column="0"
+                Name="SphereImage"
+               Source="Resources/ci.jpg"
+                   HorizontalAlignment="Left"
+                   Margin="150,0,0,0"
+               Width="150"
+               Height="150"
+               />
             <Slider Grid.Column="1" Name="DeepSlider"
                     Orientation="Vertical"          
                     Margin="5,10,5,10" 
@@ -54,5 +62,6 @@
                    FontWeight="Bold"
                    Margin="150,0,150,0" 
                    HorizontalAlignment="Center"/>
-    </Grid>
+        </Grid>
+
 </Window>

@@ -136,6 +136,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\ci.jpg" />
     <Content Include="Resources\za_all.out">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
